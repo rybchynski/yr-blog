@@ -4,12 +4,12 @@ import Image from '@/components/Image'
 import { PageSEO } from '@/components/SEO'
 import { SocialIcons } from '@/components/SocialIcons'
 
-interface Props {
+interface AuthorLayoutPropsInterface {
   children: ReactNode
   content: Omit<Authors, '_id' | '_raw' | 'body'>
 }
 
-export default function AuthorLayout({ children, content }: Props) {
+export default function AuthorLayout({ children, content }: AuthorLayoutPropsInterface) {
   const { name, avatar, occupation, company } = content
 
   return (

@@ -2,9 +2,10 @@ const siteMetadata = {
   title: "Developer's Blog",
   author: 'Yuriy Rybchynski',
   headerTitle: 'YR',
-  description:
-    "An Indie Developer's Blog. Will share articles, ideas, thoughts here, please feel welcome!",
+  subtitle: "An Indie Developer's Blog.",
+  description: 'Here I will share articles, ideas, thoughts, and so on. Please feel welcome!',
   language: 'en-us',
+  location: 'Lutsk, Ukraine 🇺🇦',
   theme: 'system',
   siteUrl: 'https://yr-dev.com',
   siteRepo: 'https://github.com/rybchynski/yr-blog',
@@ -18,12 +19,10 @@ const siteMetadata = {
   linkedin: 'https://www.linkedin.com/in/yuriy-rybchynski-6b4125158/',
   drupal: 'https://www.drupal.org/u/rybchynski',
   locale: 'en-US',
+  available: true,
   analytics: {
     umamiWebsiteId: '', // e.g. 123e4567-e89b-12d3-a456-426614174000
     googleAnalyticsId: '', // e.g. UA-000000-2 or G-XXXXXXX
-  },
-  newsletter: {
-    provider: 'mailchimp',
   },
   comments: {
     // Select a provider and use the environment variables associated to it

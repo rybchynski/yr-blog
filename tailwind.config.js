@@ -26,6 +26,8 @@ module.exports = {
         13: '3.25rem',
         14: '3.5rem',
       },
+      margin: ['responsive'],
+      padding: ['responsive'],
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans],
       },
