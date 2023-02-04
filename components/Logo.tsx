@@ -1,18 +1,18 @@
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 
-export const Logo = () => {
+export const Logo = (): JSX.Element => {
   const blackColor = '#000000'
   const blackBgColor = '#171717'
   const whiteColor = '#ffffff'
   const { theme, resolvedTheme } = useTheme()
-  const [fillColor, setFillColor] = useState<String>(blackColor)
-  const [fillBgColor, setFillBgColor] = useState<String>(blackColor)
+  const [fillColor, setFillColor] = useState<string>(blackColor)
+  const [fillBgColor, setFillBgColor] = useState<string>(blackColor)
 
   useEffect(() => {
     setFillColor(theme === 'dark' || resolvedTheme === 'dark' ? whiteColor : blackColor)
     setFillBgColor(theme === 'dark' || resolvedTheme === 'dark' ? blackBgColor : whiteColor)
-  }, [theme])
+  }, [theme, resolvedTheme])
 
   return (
     <svg

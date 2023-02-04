@@ -1,6 +1,6 @@
 import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
-import siteMetadata from '@/data/siteMetadata'
+import { title, subtitle, description } from '@/data/siteMetadata'
 import { sortedBlogPost, allCoreContent } from 'pliny/utils/contentlayer'
 import { InferGetStaticPropsType } from 'next'
 import { allBlogs } from 'contentlayer/generated'
@@ -22,18 +22,16 @@ export const getStaticProps = async () => {
 export default function Home({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
+      <PageSEO title={title} description={description} />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-3 md:pt-6 pb-8 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Dev Blog
+            {title}
           </h1>
           <pre className="text-xl leading-5 text-gray-500 dark:text-gray-400 h-[20px]">
-            {siteMetadata.subtitle}
+            {subtitle}
           </pre>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
-          </p>
+          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">{description}</p>
         </div>
 
         <div className="divide-x">

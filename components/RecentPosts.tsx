@@ -4,7 +4,7 @@ import Link from '@/components/Link'
 import { Blog } from '../.contentlayer/generated/types'
 
 interface RecentPostsPropsInterface {
-  posts: Blog[]
+  posts: Omit<Blog, '_id' | '_raw' | 'body'>[]
 }
 
 export const RecentPosts = ({ posts }: RecentPostsPropsInterface): JSX.Element => {
