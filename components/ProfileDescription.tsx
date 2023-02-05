@@ -1,6 +1,6 @@
 export const ProfileDescription = () => {
   return (
-    <div className="desc md:text-justify">
+    <div className="desc text-justify">
       <p className="text-lg text-gray-500 dark:text-gray-400">
         My name is Yuriy, I am a full-stack web developer from Ukraine 🇺🇦, specializing in Drupal,
         Vanilla JS, Vue, React, NextJS, NestJS. I'm really passionate about web development and

@@ -12,7 +12,7 @@ export const RecentPosts = ({ posts }: RecentPostsPropsInterface): JSX.Element =
     <div>
       <h2 className="my-6 font-bold leading-8 text-center text-2xl">Recent posts</h2>
       {posts.map((post) => (
-        <div key={post.title} className="mb-4">
+        <div key={post.title} className="mb-6">
           <div className="grid grid-cols-4 gap-2 items-start">
             <Image
               src={post.cover_image}
@@ -21,7 +21,7 @@ export const RecentPosts = ({ posts }: RecentPostsPropsInterface): JSX.Element =
               alt={post.title}
               className="hidden sm:block"
             />
-            <div className="col-span-3">
+            <div className="col-span-4 sm:col-span-3">
               <Link href={`/${post.path}`} className="text-gray-900 dark:text-gray-100">
                 <h3 className="text-xl font-bold leading-8 tracking-tigh">{post.title}</h3>
               </Link>
